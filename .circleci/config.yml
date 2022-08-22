@@ -9,17 +9,17 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+          key: npm-v1-{{ checksum "package-lock.json" }}-{{ arch }}
 
       - restore_cache:
-          key: yarn-v1-{{ checksum "package.json" }}-{{ arch }}
+          key: npm-v1-{{ checksum "package.json" }}-{{ arch }}
 
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
-          key: npm-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+          key: npm-v1-{{ checksum "package-lock.json" }}-{{ arch }}
           paths:
-            - ~/.cache/yarn
+            - ~/.cache/npm
 
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
@@ -56,17 +56,17 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+          key: npm-v1-{{ checksum "package-lock.json" }}-{{ arch }}
 
       - restore_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
 
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
-          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+          key: npm-v1-{{ checksum "package-lock.json" }}-{{ arch }}
           paths:
-            - ~/.cache/yarn
+            - ~/.cache/npm
 
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
@@ -118,17 +118,17 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+          key: npm-v1-{{ checksum "package-lock.json" }}-{{ arch }}
 
       - restore_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
 
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
-          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+          key: npm-v1-{{ checksum "package-lock.json" }}-{{ arch }}
           paths:
-            - ~/.cache/yarn
+            - ~/.cache/npm
 
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
