@@ -107,7 +107,7 @@ jobs:
       - store_artifacts:
           path: ios/rndemo.ipa
 
-    ios-prod:
+  ios-prod:
     working_directory: ~/demo-react-native
     macos:
       xcode: 13.4.1
@@ -165,7 +165,6 @@ jobs:
           name: Fastlane Prod
           command: bundle exec fastlane prod
           working_directory: ios
-
 
   # android-alpha:
   #   working_directory: ~/demo-react-native/android
