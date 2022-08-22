@@ -487,7 +487,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NLLXM7C73R;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = rndemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,7 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.khoros.rndemo;
 				PRODUCT_NAME = rndemo;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.khoros.rndemo";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -514,9 +514,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NLLXM7C73R;
 				INFOPLIST_FILE = rndemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -529,7 +530,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.khoros.rndemo;
 				PRODUCT_NAME = rndemo;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.khoros.rndemo";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
