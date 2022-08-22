@@ -9,17 +9,17 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: npm-v1-{{ checksum "package.lock.json" }}-{{ arch }}
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
 
       - restore_cache:
-          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+          key: yarn-v1-{{ checksum "package.json" }}-{{ arch }}
 
-      - run: npm install
+      - run: yarn install
 
       - save_cache:
-          key: npm-v1-{{ checksum "package.lock.json" }}-{{ arch }}
+          key: npm-v1-{{ checksum "yarn.lock" }}-{{ arch }}
           paths:
-            - ~/.cache/npm
+            - ~/.cache/yarn
 
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
@@ -56,17 +56,17 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: npm-v1-{{ checksum "package.lock.json" }}-{{ arch }}
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
 
       - restore_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
 
-      - run: npm install
+      - run: yarn install
 
       - save_cache:
-          key: npm-v1-{{ checksum "package.lock.json" }}-{{ arch }}
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
           paths:
-            - ~/.cache/npm
+            - ~/.cache/yarn
 
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
@@ -118,17 +118,17 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: npm-v1-{{ checksum "package.lock.json" }}-{{ arch }}
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
 
       - restore_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
 
-      - run: npm install
+      - run: yarn install
 
       - save_cache:
-          key: npm-v1-{{ checksum "package.lock.json" }}-{{ arch }}
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
           paths:
-            - ~/.cache/npm
+            - ~/.cache/yarn
 
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
