@@ -22,7 +22,7 @@ platform :ios do
   desc "Push a new builds to TestFlight"
   lane :beta do
     match(type:'appstore')
-    build_app(schema: "rndemo")
+    build_app(scheme: "rndemo")
     upload_to_testflight
   end
   lane :prod do
