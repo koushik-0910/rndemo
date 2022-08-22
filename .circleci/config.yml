@@ -207,18 +207,18 @@ workflows:
             branches:
               ignore: /.*/
       - node:
-        filters:
-          tags:
-            only: /^v.*/
-          branches:
-            ignore: /.*/
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
       # - android-build-and-test:
       #     requires:
       #       - node
       - ios-beta:
           requires:
             - node
-            filters:
+          filters:
             tags:
               only: /^v.*/
             branches:
@@ -226,7 +226,7 @@ workflows:
       - ios-prod:
           requires:
             - ios-hold
-            filters:
+          filters:
             tags:
               only: /^v.*/
             branches:
